@@ -11,8 +11,8 @@
   <div id="app">
     <bia-titulo v-bind:titulo="meuTitulo"></bia-titulo>
     <input type="text" v-model="meuTitulo">
+    <bia-tabela v-bind:titulos="['Título','Descrição', 'Link']" v-bind:registros="registros"></bia-tabela>
   </div>
-  
   
   <script type="text/javascript">
 
@@ -20,11 +20,33 @@
     props: ['titulo'],
     template:'<h2>{{ titulo }}</h2>'
   });
+
+  Vue.component('bia-tabela', {
+    props: ['titulos','registros'],
+    template:
+    '<table style="width: 100%">'+
+      '<thead>'+
+        '<tr>'+
+            '<th v-for="titulo in titulos">{{titulo}}</th>'+
+          '</tr>'+
+      '</thead>'+
+      '<tbody>'+
+        '<tr v-for="registro in registros">'+
+            '<td v-for="item in registro">{{item}}</td>'+
+          '</tr>'+
+      '</tbody>'+
+    '</table>'
+  });
     
     var app = new Vue({
       el:"#app",
       data: {
-        meuTitulo:'esse é o titulo'
+        meuTitulo:'esse é o titulo',
+        registros: [
+          {titulo:'Titulo 1', descricao:'descricao 1', link: 'link 1'},
+          {titulo:'Titulo 2', descricao:'descricao 2', link: 'link 2'},
+          {titulo:'Titulo 3', descricao:'descricao 3', link: 'link 3'}
+        ]
       }
 
     }); 

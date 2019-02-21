@@ -9,14 +9,15 @@
 </head>
 <body>
   <div id="app">
-    <bia-titulo></bia-titulo>
+    <bia-titulo titulo="esse é o titulo"></bia-titulo>
   </div>
   
   
   <script type="text/javascript">
 
   Vue.component('bia-titulo', {
-    template:'<h2>Componente de titulo</h2>'
+    props: ['titulo'],
+    template:'<h2>{{ titulo }}</h2>'
   });
     
     var app = new Vue({

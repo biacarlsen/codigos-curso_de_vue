@@ -22,6 +22,10 @@
       <textarea v-model="textarea" cols="80" rows="8"></textarea>
     </p>
 
+    <p>Checkbox: </p>
+    <input type="checkbox" id="aceitaTermos" v-model="termos">
+    <label for="aceitaTermos">{{termos}}</label>
+
   </div>
   
   <script type="text/javascript">
@@ -35,7 +39,8 @@
       el:"#app",
       data:{
         texto:'',
-        textarea:''
+        textarea:'',
+        termos:false
       }
     });
 

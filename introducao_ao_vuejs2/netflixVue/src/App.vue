@@ -1,13 +1,15 @@
 <template>
-  <div class="contain"> 
+  <div class="contain">
     <div class="slider">
       <h3>Ação</h3>
-      <span  class="handle handlePrev active">
+      <span v-on:mouseover="scrollEsquerda()" v-on:mouseout="clearScroll()" class="handle handlePrev active">
         <i class="fa fa-caret-left" aria-hidden="true"></i>
       </span>
+
       <div id="scroller" class="row">
+        {{intervalo}}
         <div class="row__inner">
-            <div class="gui-card">
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -16,8 +18,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -26,8 +28,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -36,8 +38,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -46,8 +48,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -56,8 +58,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -66,8 +68,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -76,8 +78,8 @@
                 Assassin’s Creed
               </div>
             </div>
-            </div>
-            <div class="gui-card">
+          </div>
+          <div class="gui-card">
             <div class="gui-card__media">
               <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
@@ -86,17 +88,30 @@
                 Assassin’s Creed
               </div>
             </div>
+          </div>
+          <div class="gui-card">
+            <div class="gui-card__media">
+              <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt=""  />
             </div>
+            <div class="gui-card__details">
+              <div class="gui-card__title">
+                Assassin’s Creed
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-      
-      <span onmouseover="scrollDireita()" onmouseout="clearScroll()"  class="handle handleNext active">
+
+
+
+      <span v-on:mouseover="scrollDireita()" v-on:mouseout="clearScroll()"  class="handle handleNext active">
         <i class="fa fa-caret-right" aria-hidden="true"></i>
       </span>
+
     </div>
-
-
   </div>
+
 </template>
 
 
@@ -106,15 +121,31 @@ export default {
   name: 'App',
   data () {
     return {
-      nomeProjeto: 'Netflix com Vue'
+      nomeProjeto: 'Netflix com Vue',
+      intervalo:0,
     }
-  }
+  },
+  methods: {
+     scrollDireita(){
+      this.intervalo = setInterval(function(){ document.querySelector('#scroller').scrollLeft += 20 
+      console.log(this.intervalo) }  , 20);
+      
+    },
+    scrollEsquerda(){
+      this.intervalo = setInterval(function(){ document.querySelector('#scroller').scrollLeft -= 20
+      console.log(this.intervalo) }  , 20);
+    },
+    clearScroll() {
+      clearInterval(this.intervalo);
+    }
+  },
 }
 </script>
 
 
-<style >
+<style lang="scss">
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
 
 body,
 html {
@@ -182,13 +213,13 @@ a:hover {
 }
 
 .slider .handle.handlePrev {
-    left: 11px;
-
+    left: 0;
+    margin-left: 3%;
 }
 
 .slider .handle.handleNext {
-    right: 11px;
-
+    right: 0;
+    margin-right: 3%;
 }
 
 .slider .handle.active {
@@ -202,7 +233,7 @@ a:hover {
     height: 251px;
     bottom: 0;
     z-index: 20;
-    width: 7%;
+    width: 4%;
     text-align: center;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -223,7 +254,8 @@ a:hover {
 }
 
 .row {
-  overflow: hidden;
+  overflow-x: hidden;
+    overflow-y: hidden;
 }
 .row__inner {
   -webkit-transition: 450ms -webkit-transform;

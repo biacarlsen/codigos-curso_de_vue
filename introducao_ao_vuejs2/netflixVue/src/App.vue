@@ -1,8 +1,11 @@
 <template>
   <div class="contain">
-    <categoria titulo="Comédia"></categoria>
-    <categoria titulo="Suspense"></categoria>
-    <categoria titulo="Terror"></categoria>
+    <categoria
+      v-for="categoria in categorias"
+      v-bind:key="categoria.id"
+      v-bind:titulo="categoria.titulo"
+      v-bind:filmes="categoria.filmes"
+    ></categoria>
   </div>
 </template>
 
@@ -19,7 +22,51 @@ export default {
   data() {
     return {
       nomeProjeto: "Netflix com Vue",
-      intervalo: 0
+      intervalo: null,
+      categorias: [
+        {
+          id: 1,
+          titulo: "Terror",
+          filmes: [
+            {
+              id: 1,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            },
+            {
+              id: 2,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            },
+            {
+              id: 3,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            },
+            {
+              id: 4,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            },
+            {
+              id: 5,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            },
+            {
+              id: 6,
+              titulo: "It: A Coisa",
+              imagem:
+                "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+            }
+          ]
+        }
+      ]
     };
   }
 };

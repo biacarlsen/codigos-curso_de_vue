@@ -2,34 +2,32 @@
   <div class="contain">
     <categoria titulo="Comédia"></categoria>
     <categoria titulo="Suspense"></categoria>
-    <categoria titulo="Terror"></categoria> 
+    <categoria titulo="Terror"></categoria>
   </div>
 </template>
 
 
 <script>
-
 // import teste from './components/teste.vue'
-import Categoria from './components/Categoria.vue'
+import Categoria from "./components/Categoria.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Categoria,
+    Categoria
   },
-  data () {
+  data() {
     return {
-      nomeProjeto: 'Netflix com Vue',
-      intervalo:0,
-    }
+      nomeProjeto: "Netflix com Vue",
+      intervalo: 0
+    };
   }
-}
+};
 </script>
 
 
 <style lang="scss">
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
-
 
 body,
 html {
@@ -37,18 +35,18 @@ html {
   margin: 0;
   background: #0e0f11;
   color: #ecf0f1;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 * {
@@ -82,64 +80,64 @@ a:hover {
 }
 
 .slider {
-    height: 214px;
-    position: relative;
-    margin: 0;
-    padding: 0 4%;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
+  height: 214px;
+  position: relative;
+  margin: 0;
+  padding: 0 4%;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
 }
 
-.slider h3{
+.slider h3 {
   position: absolute;
   top: 22px;
   z-index: 30;
 }
 
 .slider .handle.handlePrev {
-    left: 0;
-    margin-left: 3%;
+  left: 0;
+  margin-left: 3%;
 }
 
 .slider .handle.handleNext {
-    right: 0;
-    margin-right: 3%;
+  right: 0;
+  margin-right: 3%;
 }
 
 .slider .handle.active {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .slider .handle {
-    background: rgba(20, 20, 20, 0.26);
-    position: absolute;
-    top: 0;
-    height: 251px;
-    bottom: 0;
-    z-index: 20;
-    width: 4%;
-    text-align: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: #fff;
+  background: rgba(20, 20, 20, 0.26);
+  position: absolute;
+  top: 0;
+  height: 251px;
+  bottom: 0;
+  z-index: 20;
+  width: 4%;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
 }
 
-.fa{
+.fa {
   font-size: 46px;
   margin-top: 120px;
 }
 
 .row {
   overflow-x: hidden;
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 .row__inner {
   -webkit-transition: 450ms -webkit-transform;
@@ -152,7 +150,6 @@ a:hover {
   padding-bottom: 10px;
 }
 
-
 .gui-card {
   position: relative;
   display: inline-block;
@@ -164,13 +161,13 @@ a:hover {
   -webkit-transition: 450ms all;
   transition: 450ms all;
   -webkit-transform-origin: center left;
-          transform-origin: center left;
+  transform-origin: center left;
 }
 .gui-card__img {
   width: 250px;
   height: 140.625px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .gui-card__details {
   position: absolute;
@@ -180,14 +177,22 @@ a:hover {
   top: 0;
   font-size: 10px;
   opacity: 0;
-  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   -webkit-transition: 450ms opacity;
   transition: 450ms opacity;
 }
 .gui-card__details:after,
 .gui-card__details:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -202,11 +207,11 @@ a:hover {
   line-height: 50px;
   text-align: center;
   border-radius: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 .gui-card__details:before {
-  content: '▶';
+  content: "▶";
   left: 0;
   width: 100%;
   font-size: 30px;
@@ -225,19 +230,18 @@ a:hover {
 }
 .row__inner:hover {
   -webkit-transform: translate3d(-62.5px, 0, 0);
-          transform: translate3d(-62.5px, 0, 0);
+  transform: translate3d(-62.5px, 0, 0);
 }
 .row__inner:hover .gui-card {
   opacity: 0.3;
 }
 .row__inner:hover .gui-card:hover {
   -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
   opacity: 1;
 }
 .gui-card:hover ~ .gui-card {
   -webkit-transform: translate3d(125px, 0, 0);
-          transform: translate3d(125px, 0, 0);
+  transform: translate3d(125px, 0, 0);
 }
-
 </style>

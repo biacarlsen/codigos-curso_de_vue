@@ -1,40 +1,78 @@
 {
-  "categorias": [
-    {
-"id": 1,
-"titulo": "Terror",
-"filmes": [
-        {
-"id": 1,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        },
-        {
-"id": 2,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        },
-        {
-"id": 3,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        },
-        {
-"id": 4,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        },
-        {
-"id": 5,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        },
-        {
-"id": 6,
-"titulo": "It: A Coisa",
-"imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
-        }
-      ]
-    }
-  ]
+        "categorias": [
+                {
+                        "id": 1,
+                        "titulo": "Terror",
+                        "filmes": [
+                                {
+                                        "id": 1,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                },
+                                {
+                                        "id": 2,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                },
+                                {
+                                        "id": 3,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                },
+                                {
+                                        "id": 4,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                },
+                                {
+                                        "id": 5,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                },
+                                {
+                                        "id": 6,
+                                        "titulo": "It: A Coisa",
+                                        "imagem": "http://s2.glbimg.com/m7U1EYV5N6G04NmLKbSBMB-njlc=/e.glbimg.com/og/ed/f/original/2017/11/21/150472581959b04b3bc2090_1504725819_3x2_md.jpg"
+                                }
+                        ]
+                },
+                {
+                        "id": 2,
+                        "titulo": "Comédia",
+                        "filmes": [
+                                {
+                                        "id": 1,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                },
+                                {
+                                        "id": 2,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                },
+                                {
+                                        "id": 3,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                },
+                                {
+                                        "id": 4,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                },
+                                {
+                                        "id": 5,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                },
+                                {
+                                        "id": 6,
+                                        "titulo": "Um Maluco no Pedaço",
+                                        "imagem": "https://abrilsuperinteressante.files.wordpress.com/2018/03/um-maluco-no-pedac3a7o-pode-ganhar-reboot-com-personagem-feminina.png"
+                                }
+                        ]
+                }
+
+        ]
+
 }

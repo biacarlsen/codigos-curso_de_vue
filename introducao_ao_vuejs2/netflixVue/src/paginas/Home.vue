@@ -12,7 +12,7 @@
 
 <script>
 // import teste from './components/teste.vue'
-import Categoria from "./components/Categoria.vue";
+import Categoria from "../components/Categoria.vue";
 
 export default {
   name: "App",
